@@ -1,0 +1,97 @@
+[
+    {
+        "id": 1,
+        "image": "./assets/img/audrey.png",
+        "name": "audrey horne"
+    },
+    {
+        "id": 1,
+        "image": "./assets/img/audrey.png",
+        "name": "audrey horne"
+    },
+    {
+        "id": 1,
+        "image": "./assets/img/audrey.png",
+        "name": "audrey horne"
+    },
+    {
+        "id": 1,
+        "image": "./assets/img/audrey.png",
+        "name": "audrey horne"
+    },
+    {
+        "id": 2,
+        "image": "./assets/img/bob.png",
+        "name": "bob"
+    },
+    {
+        "id": 3,
+        "image": "./assets/img/bobby.png",
+        "name": "bobby briggs"
+    },
+    {
+        "id": 4,
+        "image": "./assets/img/cooper.png",
+        "name": "dale cooper"
+    },
+    {
+        "id": 5,
+        "image": "./assets/img/ed.png",
+        "name": "big ed"
+    },
+    {
+        "id": 6,
+        "image": "./assets/img/giant.png",
+        "name": "the giant"
+    },
+    {
+        "id": 7,
+        "image": "./assets/img/gordon.png",
+        "name": "gordon cole"
+    },
+    {
+        "id": 8,
+        "image": "./assets/img/harry.png",
+        "name": "harry truman"
+    },
+    {
+        "id": 9,
+        "image": "./assets/img/hawk.png",
+        "name": "deputy hawk"
+    },
+    {
+        "id": 10,
+        "image": "./assets/img/james.png",
+        "name": "james hurley"
+    },
+    {
+        "id": 11,
+        "image": "./assets/img/leland.png",
+        "name": "deputy hawk"
+    },
+    {
+        "id": 12,
+        "image": "./assets/img/loglady.png",
+        "name": "log lady"
+    },
+    {
+        "id": 13,
+        "image": "./assets/img/major.png",
+        "name": "major briggs"
+    },
+    {
+        "id": 14,
+        "image": "./assets/img/manfromanotherplace.png",
+        "name": "the man from another place"
+    },
+    {
+        "id": 15,
+        "image": "./assets/img/mike.png",
+        "name": "the one armed man"
+    },
+    {
+        "id": 16,
+        "image": "./assets/img/pete.png",
+        "name": "pete martell"
+    }
+]

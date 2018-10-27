@@ -10,20 +10,46 @@ import images from './images.json';
 class App extends React.Component {
 
     state = {
-        images: images
+        images: images,
+        currentScore: 0,
+        topScore: 0,
+        clicked: []
+    }
+    componentDidMount () {
+
+    }
+
+    shuffleCards = array => {
+        const shuffled = array.map(a => [Math.random(), a])
+            .sort((a, b) => a[0] - b[0])
+            .map(a => a[1]);
+        return shuffled;
     }
 
 
+    handleClick = id => {
+        console.log(`id: ${id}`)
+        this.shuffleCards()
+        this.setState({
+            clicked: [...this.state.clicked, id],
+            images: this.shuffleCards(images)
+        });
+    }
+
     render () {
         return (
-            <Container>
+            < div >
                 <Nav />
-                <Row>
-                    {this.state.images.map((image, i) => <Cards
-                        key={i}
-                        image={image.image} />)}
-                </Row>
-            </Container>
+                <Container>
+                    <Row>
+                        {this.state.images.map((image, i) => <Cards
+                            key={image.id}
+                            image={image.image}
+                            id={image.id}
+                            handleClick={this.handleClick} />)}
+                    </Row>
+                </Container>
+            </div >
 
         );
     }

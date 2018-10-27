@@ -58,25 +58,5 @@
         "id": 12,
         "image": "./assets/img/loglady.png",
         "name": "log lady"
-    },
-    {
-        "id": 13,
-        "image": "./assets/img/major.png",
-        "name": "major briggs"
-    },
-    {
-        "id": 14,
-        "image": "./assets/img/manfromanotherplace.png",
-        "name": "the man from another place"
-    },
-    {
-        "id": 15,
-        "image": "./assets/img/mike.png",
-        "name": "the one armed man"
-    },
-    {
-        "id": 16,
-        "image": "./assets/img/pete.png",
-        "name": "pete martell"
     }
 ]

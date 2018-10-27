@@ -9,7 +9,7 @@ import images from './images.json';
 class App extends React.Component {
 
     state = {
-        images
+        images: images
     }
 
 
@@ -18,7 +18,9 @@ class App extends React.Component {
             <div>
                 <Nav />
                 <Row>
-
+                    {this.state.images.map((image, i) => <Cards
+                        key={i}
+                        image={image.image} />)}
                 </Row>
             </div>
 

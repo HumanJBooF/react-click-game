@@ -1,16 +1,16 @@
 import React from 'react';
-import Container from '../Container';
+import styles from './styles';
 
 const Nav = props => (
-    <nav>
+    <nav style={styles.nav}>
         <div className="nav-wrapper">
-            <Container fluid>
-                <a href="#!" className="brand-logo center">Twin Peaks Memory</a>
-                <ul>
-                    <li>{props.currentScore}</li>
-                    <li>{props.topScore}</li>
+            <div className='container-fluid'>
+                <a href="#!" className="brand-logo center" style={styles.nav}>Twin Peaks Memory</a>
+                <ul className='right'>
+                    <li><a href='#!'>{props.currentScore}</a></li>
+                    <li><a href='#!'>{props.topScore}</a></li>
                 </ul>
-            </Container>
+            </div>
         </div>
     </nav>
 );

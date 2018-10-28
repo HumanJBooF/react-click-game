@@ -1,11 +1,8 @@
 import React from 'react';
 import Nav from './components/Nav';
-import Row from './components/Row';
 import Cards from './components/Cards';
-import Container from './components/Container';
+import Header from './components/Header';
 import images from './images.json';
-
-
 
 class App extends React.Component {
 
@@ -13,7 +10,8 @@ class App extends React.Component {
         images: images,
         currentScore: 0,
         topScore: 0,
-        clicked: []
+        clicked: [],
+        message: ''
     }
 
 
@@ -54,19 +52,20 @@ class App extends React.Component {
     checkWinLose = (lost, id) => {
         const newScore = this.state.currentScore
         if (this.state.clicked.length === 11) {
-            alert('YOU WIN!')
             this.setState({
                 images: images,
                 currentScore: 0,
                 topScore: newScore > this.state.topScore ? newScore : this.state.topScore,
-                clicked: []
-            })
+                clicked: [],
+                message: 'You Win! Click image to try again.'
+            });
         } else {
             const score = this.state.currentScore + 1
             this.setState({
                 clicked: [...this.state.clicked, id],
                 images: this.shuffleCards(images),
-                currentScore: score
+                currentScore: score,
+                message: ''
             });
         }
         if (lost) {
@@ -74,33 +73,34 @@ class App extends React.Component {
                 images: images,
                 currentScore: 0,
                 topScore: newScore > this.state.topScore ? newScore : this.state.topScore,
-                clicked: []
-            })
+                clicked: [],
+                message: 'You Lose! Click image to try again.'
+            });
         }
-
     }
 
     render () {
         return (
-            <div>
-                <Nav
+            <div className='container-fluid'>
+                <Nav />
+                <Header
                     currentScore={this.state.currentScore}
                     topScore={this.state.topScore}
-                />
-                <Container>
-                    <Row>
-                        {this.state.images.map(image => <Cards
-                            key={image.id}
-                            image={image.image}
-                            id={image.id}
-                            handleClick={this.handleClick} />)}
-                    </Row>
-                </Container>
+                    message={this.state.message} />
+                <div className='container'>
+                    <div className='row flow-text'>
+                        {this.state.images.map(image =>
+                            <Cards
+                                key={image.id}
+                                image={image.image}
+                                id={image.id}
+                                handleClick={this.handleClick} />)}
+                    </div>
+                </div>
             </div >
 
         );
     }
 }
-
 
 export default App;

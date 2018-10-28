@@ -69,7 +69,7 @@ class App extends React.Component {
                 currentScore: score
             });
         }
-        if (lost === true) {
+        if (lost) {
             this.setState({
                 images: images,
                 currentScore: 0,

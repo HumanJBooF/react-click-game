@@ -3,8 +3,8 @@ import Col from '../Col';
 
 const styles = {
     card: {
-        height: '250px',
-        width: 'auto'
+        height: '200px',
+        width: '200px'
     }
 }
 

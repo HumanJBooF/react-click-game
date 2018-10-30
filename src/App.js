@@ -2,6 +2,7 @@ import React from 'react';
 import Nav from './components/Nav';
 import Cards from './components/Cards';
 import Header from './components/Header';
+import Footer from './components/Footer';
 import images from './images.json';
 
 class App extends React.Component {
@@ -29,7 +30,6 @@ class App extends React.Component {
         const shuffled = array.map(a => [Math.random(), a])
             .sort((a, b) => a[0] - b[0])
             .map(a => a[1]);
-        console.log(shuffled);
         return shuffled;
     }
 
@@ -37,14 +37,12 @@ class App extends React.Component {
         console.log(`id: ${id}`)
         switch (this.checkClicked(id)) {
             case true:
-                console.log(`YOU LOSE!`);
                 this.checkWinLose(true);
                 break;
             case false:
                 this.checkWinLose(false, id);
                 break;
             default:
-                console.log(`DEFAULT!`);
                 break;
         }
     }
@@ -97,6 +95,7 @@ class App extends React.Component {
                                 handleClick={this.handleClick} />)}
                     </div>
                 </div>
+                <Footer />
             </div >
 
         );

@@ -49,6 +49,7 @@ class App extends React.Component {
 
     checkWinLose = (lost, id) => {
         const newScore = this.state.currentScore
+        console.log(this.state.clicked.length)
         if (this.state.clicked.length === 11) {
             this.setState({
                 images: images,

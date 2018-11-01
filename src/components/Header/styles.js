@@ -8,8 +8,8 @@ const styles = {
         fontFamily: `'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif`,
         textTransform: 'uppercase',
         color: '#593125',
-        webkitTextStrokeWidth: '3px',
-        webkitTextStrokeColor: '#1a8f1d',
+        WebkitTextStrokeWidth: '3px',
+        WebkitTextStrokeColor: '#1a8f1d',
         textShadow: '5px 5px 5px #000',
     },
     bottom: {

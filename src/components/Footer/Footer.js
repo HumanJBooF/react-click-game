@@ -25,8 +25,8 @@ const Footer = () => (
                     </a>
                 </div>
             </div>
-            <div class="footer-copyright center">
-                <div class="container">
+            <div className="footer-copyright center">
+                <div className="container">
                     © 2018
                 </div>
             </div>

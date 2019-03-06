@@ -26,12 +26,10 @@ class App extends React.Component {
         return matchFound;
     }
 
-    shuffleCards = array => {
-        const shuffled = array.map(a => [Math.random(), a])
+    shuffleCards = array =>
+        array.map(a => [Math.random(), a])
             .sort((a, b) => a[0] - b[0])
-            .map(a => a[1]);
-        return shuffled;
-    }
+            .map(a => a[1])
 
     handleClick = id => {
         console.log(`id: ${id}`)
@@ -48,20 +46,20 @@ class App extends React.Component {
     }
 
     checkWinLose = (lost, id) => {
-        const newScore = this.state.currentScore
-        console.log(this.state.clicked.length)
-        if (this.state.clicked.length === 11) {
+        const { currentScore, topScore, clicked } = this.state
+        const newScore = currentScore;
+        if (clicked.length === 12) {
             this.setState({
-                images: images,
+                images,
                 currentScore: 0,
-                topScore: newScore > this.state.topScore ? newScore : this.state.topScore,
+                topScore: newScore > topScore ? newScore : topScore,
                 clicked: [],
                 message: 'You Win! Click image to try again.'
             });
         } else {
-            const score = this.state.currentScore + 1
+            const score = currentScore + 1
             this.setState({
-                clicked: [...this.state.clicked, id],
+                clicked: [...clicked, id],
                 images: this.shuffleCards(images),
                 currentScore: score,
                 message: ''
@@ -69,9 +67,9 @@ class App extends React.Component {
         }
         if (lost) {
             this.setState({
-                images: images,
+                images,
                 currentScore: 0,
-                topScore: newScore > this.state.topScore ? newScore : this.state.topScore,
+                topScore: newScore > topScore ? newScore : topScore,
                 clicked: [],
                 message: 'You Lose! Click image to try again.'
             });
